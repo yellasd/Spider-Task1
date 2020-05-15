@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    tools:context=".SinglePlayerActivity">
+
+    <View
+        android:id="@+id/view"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="@android:color/darker_gray"
+        android:layout_centerInParent="true" />
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_above="@id/view"
+        android:id="@+id/p1back"
+        android:background="@android:color/white">
+        <ImageView
+            android:id="@+id/compChoice"
+            android:layout_width="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_alignParentBottom="true"
+            android:layout_height="120dp"
+            android:visibility="gone"
+            android:scaleType="centerInside"
+            android:layout_above="@+id/view"
+            android:src="@drawable/rock"
+            android:contentDescription="@string/computerselection"
+            tools:ignore="NotSibling" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true">
+            <TextView
+                android:id="@+id/c"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:layout_height="wrap_content"
+                android:textSize="24sp"
+                android:text="@string/computer_0"/>
+            <TextView
+                android:id="@+id/p"
+                android:layout_width="0dp"
+                android:gravity="center"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textSize="24sp"
+                android:text="@string/player_score"/>
+        </LinearLayout>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:id="@+id/p2back"
+        android:layout_height="wrap_content"
+        android:background="@android:color/white"
+        android:layout_below="@id/view">
+        <ImageView
+            android:id="@+id/playerSelection"
+            android:layout_width="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:visibility="gone"
+            android:layout_height="120dp"
+            android:scaleType="centerInside"
+            android:layout_below="@+id/view"
+            android:src="@drawable/rock"
+            android:contentDescription="@string/computerselection"
+            tools:ignore="NotSibling" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true">
+
+            <ImageButton
+                android:onClick="rock"
+                android:id="@+id/rock"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="120dp"
+                android:src="@drawable/rock"
+                android:scaleType="centerInside"
+                style="@style/Widget.AppCompat.Button.Borderless"
+                android:contentDescription="@string/rock"/>
+
+
+            <ImageButton
+                android:id="@+id/paper"
+                android:onClick="paper"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="120dp"
+                android:scaleType="centerInside"
+                android:src="@drawable/paper"
+                style="@style/Widget.AppCompat.Button.Borderless"
+                android:contentDescription="@string/paper" />
+
+            <ImageButton
+                android:onClick="scissors"
+                android:id="@+id/scissors"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="120dp"
+                android:scaleType="centerInside"
+                android:src="@drawable/scissors"
+                style="@style/Widget.AppCompat.Button.Borderless"
+                android:contentDescription="@string/scissors" />
+        </LinearLayout>
+
+    </RelativeLayout>
+
+
+</RelativeLayout>

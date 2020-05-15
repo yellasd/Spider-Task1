@@ -1,0 +1,24 @@
+<resources>
+    <string name="app_name">Stone Paper Scissors</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="stone_paper_scissors">STONE PAPER SCISSORS</string>
+    <string name="single_player">Single Player</string>
+    <string name="two_players">TWO PLAYERS</string>
+    <string name="rock">rock</string>
+    <string name="paper">paper</string>
+    <string name="scissors">scissors</string>
+    <string name="computer_0">Computer : 0</string>
+    <string name="computer_score">Computer : %1$d</string>
+    <string name="p">%1$s : %2$d</string>
+    <string name="player_score">Player : 0</string>
+    <string name="computerselection">computerSelection</string>
+    <string name="number_of_rounds">Number of rounds</string>
+    <string name="name_of_player_1">Name of player 1</string>
+    <string name="name_of_player_2">Name of Player 2(if two player game)</string>
+    <string name="player_1_0">Player 1 : 0</string>
+    <string name="player_2_0">Player 2 : 0</string>
+    <string name="p_1">%1$s : %2$d</string>
+    <string name="p_2">%1$s : %2$d</string>
+</resources>

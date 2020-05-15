@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    tools:context=".TwoPlayerActivity">
+
+    <View
+        android:id="@+id/view2"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_centerInParent="true"
+        android:background="@android:color/darker_gray" />
+
+    <RelativeLayout
+        android:id="@+id/p1back"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/view2"
+        android:layout_alignParentTop="true"
+        android:background="@android:color/white">
+
+        <TextView
+            android:id="@+id/player_1_score"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:rotation="180"
+            android:text="@string/player_1_0"
+            android:textSize="24sp" />
+
+        <ImageView
+            android:id="@+id/player1Choice"
+            android:layout_width="wrap_content"
+            android:layout_height="120dp"
+            android:layout_above="@+id/view2"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:contentDescription="@string/computerselection"
+            android:scaleType="centerInside"
+            android:src="@drawable/rock"
+            android:visibility="gone"
+            tools:ignore="NotSibling" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/player_1_score">
+
+            <ImageButton
+                android:id="@+id/rock1"
+                style="@style/Widget.AppCompat.Button.Borderless"
+                android:layout_width="0dp"
+                android:layout_height="120dp"
+                android:layout_weight="1"
+                android:contentDescription="@string/rock"
+                android:onClick="rock1"
+                android:scaleType="centerInside"
+                android:src="@drawable/rock_rev" />
+
+
+            <ImageButton
+                android:id="@+id/paper1"
+                style="@style/Widget.AppCompat.Button.Borderless"
+                android:layout_width="0dp"
+                android:layout_height="120dp"
+                android:layout_weight="1"
+                android:contentDescription="@string/paper"
+                android:onClick="paper1"
+                android:scaleType="centerInside"
+                android:src="@drawable/paper_rev" />
+
+            <ImageButton
+                android:id="@+id/scissors1"
+                style="@style/Widget.AppCompat.Button.Borderless"
+                android:layout_width="0dp"
+                android:layout_height="120dp"
+                android:layout_weight="1"
+                android:contentDescription="@string/scissors"
+                android:onClick="scissors1"
+                android:scaleType="centerInside"
+                android:src="@drawable/scissors_rev" />
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/p2back"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/view2"
+        android:background="@android:color/white">
+
+        <TextView
+            android:id="@+id/player_2_score"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:text="@string/player_2_0"
+            android:textSize="24sp" />
+
+        <ImageView
+            android:id="@+id/player2Choice"
+            android:layout_width="wrap_content"
+            android:layout_height="120dp"
+            android:layout_below="@+id/view2"
+            android:layout_centerHorizontal="true"
+            android:contentDescription="@string/computerselection"
+            android:scaleType="centerInside"
+            android:src="@drawable/rock"
+            android:visibility="gone"
+            tools:ignore="NotSibling" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@id/player_2_score">
+
+            <ImageButton
+                android:id="@+id/rock2"
+                style="@style/Widget.AppCompat.Button.Borderless"
+                android:layout_width="0dp"
+                android:layout_height="120dp"
+                android:layout_weight="1"
+                android:contentDescription="@string/rock"
+                android:onClick="rock2"
+                android:scaleType="centerInside"
+                android:src="@drawable/rock" />
+
+
+            <ImageButton
+                android:id="@+id/paper2"
+                style="@style/Widget.AppCompat.Button.Borderless"
+                android:layout_width="0dp"
+                android:layout_height="120dp"
+                android:layout_weight="1"
+                android:contentDescription="@string/paper"
+                android:onClick="paper2"
+                android:scaleType="centerInside"
+                android:src="@drawable/paper" />
+
+            <ImageButton
+                android:id="@+id/scissors2"
+                style="@style/Widget.AppCompat.Button.Borderless"
+                android:layout_width="0dp"
+                android:layout_height="120dp"
+                android:layout_weight="1"
+                android:contentDescription="@string/scissors"
+                android:onClick="scissors2"
+                android:scaleType="centerInside"
+                android:src="@drawable/scissors" />
+        </LinearLayout>
+    </RelativeLayout>
+</RelativeLayout>
